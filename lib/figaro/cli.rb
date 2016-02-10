@@ -30,6 +30,9 @@ module Figaro
       aliases: ["-p"],
       default: "config/application.yml",
       desc: "Specify a configuration file path"
+    method_option "remote",
+      aliases: ["-r"],
+      desc: "Specify a Heroku git remote"
 
     define_method "heroku:set" do
       require "figaro/cli/heroku_set"
